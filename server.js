@@ -14,7 +14,9 @@ server.get('/', (req, res) => {
     const rootElem = '<div id="root">';
     const renderedApp = renderToString(React.createElement(App, null));
 
-    res.send(html.replace(rootElem, rootElem + renderedApp));
+    setTimeout(() => {
+      res.send(html.replace(rootElem, rootElem + renderedApp));
+    }, 5000);
   });
 });
 
