@@ -11,7 +11,7 @@ server.get('/', (req, res) => {
   const htmlPath = path.resolve(__dirname, 'build', 'index.html');
 
   fs.readFile(htmlPath, 'utf8', (err, html) => {
-    const rootElem = '<div id="products-list-root">';
+    const rootElem = '<microfrontends-products-list>';
     const renderedApp = renderToString(React.createElement(App, null));
 
     setTimeout(() => {
